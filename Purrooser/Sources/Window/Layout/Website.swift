@@ -2,7 +2,7 @@
 //  WebsiteGrid.swift
 //  Purrooser
 //
-//  Created by Tristan Shaw on 9/5/24.
+//  Created by Tristan on 9/5/24.
 //
 
 struct Website: Hashable {
