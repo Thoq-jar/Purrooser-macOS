@@ -79,9 +79,9 @@ struct MainUI: View {
         if let url = URL(string: urlString) {
             let webView = createWebViewWithDNT()
             webView.load(URLRequest(url: url))
-            
             let hostingController = NSHostingController(rootView: WebView(webView: webView))
             let window = NSWindow(contentViewController: hostingController)
+            
             switch (clearDataOnClose) {
                 case true: window.title = "Purrooser (Paranoid mode) - \(title)"
                 case false: window.title = "Purrooser - \(title)"
@@ -101,12 +101,14 @@ struct MainUI: View {
 
     func createWebViewWithDNT() -> WKWebView {
         let configuration = WKWebViewConfiguration()
-        out(put: "Sending 'DO NOT TRACK' request...")
         let dntScript = WKUserScript(source: "navigator.doNotTrack = '1';", injectionTime: .atDocumentStart, forMainFrameOnly: true)
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        let dnsmpiScript = WKUserScript(source: "navigator.globalPrivacyControl = '1';", injectionTime: .atDocumentStart, forMainFrameOnly: true)
+
+        out(put: "Sending 'DO NOT TRACK' request...")
         configuration.userContentController.addUserScript(dntScript)
         
         out(put: "Sending 'DO NOT SELL' request...")
-        let dnsmpiScript = WKUserScript(source: "navigator.globalPrivacyControl = '1';", injectionTime: .atDocumentStart, forMainFrameOnly: true)
         configuration.userContentController.addUserScript(dnsmpiScript)
         if (clearDataOnClose) {
             out(put: "Stopping cookies...")
@@ -114,7 +116,6 @@ struct MainUI: View {
         } else {
             out(put: "Allowing cookies...")
         }
-        let webView = WKWebView(frame: .zero, configuration: configuration)
         return webView
     }
 }
