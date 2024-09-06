@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		A5CD86522C8A7E66009F8FC8 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CD86512C8A7E66009F8FC8 /* AppKit.framework */; };
 		A5CD86542C8A7E72009F8FC8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CD86532C8A7E72009F8FC8 /* WebKit.framework */; };
+		A5DC291D2C8A8E50008312D6 /* .upload in Resources */ = {isa = PBXBuildFile; fileRef = A5DC291C2C8A8E50008312D6 /* .upload */; };
+		A5DC291E2C8A8E50008312D6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A5DC291B2C8A8E50008312D6 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5CD863E2C8A7E1A009F8FC8 /* Purrooser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purrooser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CD86512C8A7E66009F8FC8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A5CD86532C8A7E72009F8FC8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A5DC291B2C8A8E50008312D6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A5DC291C2C8A8E50008312D6 /* .upload */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = .upload; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +48,8 @@
 				A5CD86402C8A7E1A009F8FC8 /* Purrooser */,
 				A5CD86502C8A7E66009F8FC8 /* Frameworks */,
 				A5CD863F2C8A7E1A009F8FC8 /* Products */,
+				A5DC291B2C8A8E50008312D6 /* .gitignore */,
+				A5DC291C2C8A8E50008312D6 /* .upload */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DC291D2C8A8E50008312D6 /* .upload in Resources */,
+				A5DC291E2C8A8E50008312D6 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
